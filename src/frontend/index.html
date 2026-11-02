@@ -37,7 +37,7 @@
   --sah-alert:#FF5C70; --sah-go-alt:#D7263D; --sah-soft:#18244A; --sah-soft-ink:#B4C5FF; --sah-ok:#4BD08D; color-scheme:dark}
 
 *{box-sizing:border-box}
-body{background:var(--sah-bg);color:var(--sah-ink);font:400 1.0625rem/1.5 var(--sah-body);-webkit-font-smoothing:antialiased}
+html body{background:var(--sah-bg);color:var(--sah-ink);font:400 1.0625rem/1.5 var(--sah-body);-webkit-font-smoothing:antialiased}
 .wrap{max-width:1080px;margin:0 auto;padding-block:16px 32px;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:28px}
 @media (min-width:600px){.wrap{padding-left:max(40px,env(safe-area-inset-left,0px));padding-right:max(40px,env(safe-area-inset-right,0px))}}
 
@@ -58,7 +58,7 @@ body{background:var(--sah-bg);color:var(--sah-ink);font:400 1.0625rem/1.5 var(--
 .hero{min-width:0;display:flex;flex-direction:column;gap:18px}
 .eyebrow{align-self:flex-start;display:inline-flex;align-items:center;gap:8px;margin:0;padding:6px 12px;border-radius:999px;background:var(--sah-soft);color:var(--sah-soft-ink);font-weight:700;font-size:.95rem}
 .eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--sah-alert)}
-h1{margin:0;font:900 clamp(2.4rem,9vw,4.3rem)/1.02 var(--sah-display);font-stretch:112%;letter-spacing:-.025em;text-wrap:balance}
+.hero h1{margin:0;font:900 clamp(2.4rem,9vw,4.3rem)/1.02 var(--sah-display);font-stretch:112%;letter-spacing:-.025em;text-wrap:balance}
 h1 .hl{color:var(--sah-alert)}
 .sub{margin:0;max-width:34ch;color:var(--sah-muted);font-size:clamp(1.15rem,4.2vw,1.35rem);line-height:1.45}
 .go{display:flex;align-items:center;justify-content:space-between;gap:14px;width:100%;max-width:520px;min-height:68px;padding:12px 12px 12px 22px;border-radius:18px;background:var(--sah-brand);color:var(--sah-on-brand);font:700 clamp(1.1rem,4.4vw,1.3rem)/1.25 var(--sah-body);text-decoration:none;box-shadow:0 14px 30px -14px var(--sah-glow);transition:background .15s ease,transform .15s ease}
@@ -117,7 +117,7 @@ h1 .hl{color:var(--sah-alert)}
 [lang="ar"],[lang="ar"] *{font-family:"Noto Kufi Arabic",Tahoma,sans-serif!important;letter-spacing:0!important}
 [lang="bn"],[lang="bn"] *{font-family:"Noto Sans Bengali",sans-serif!important;letter-spacing:0!important}
 [lang="zh-Hans"],[lang="zh-Hans"] *{font-family:"Noto Sans SC","PingFang SC",sans-serif!important;letter-spacing:0!important}
-[lang="ar"] h1,[lang="bn"] h1,[lang="zh-Hans"] h1{line-height:1.3;font-size:clamp(2rem,7.5vw,3.6rem)}
+[lang="ar"] .hero h1,[lang="bn"] .hero h1,[lang="zh-Hans"] .hero h1{line-height:1.3;font-size:clamp(2rem,7.5vw,3.6rem)}
 
 :focus-visible{outline:3px solid var(--sah-brand);outline-offset:3px}
 
