@@ -1,14 +1,15 @@
 {
-  "overview": "A small temporary one-page site for StioAIhacking.com with a clear placeholder message and polished responsive design.",
+  "overview": "StopAIHacking.com: a one page site for the free Small Business Security book and its 10 step security guide, in five languages.",
   "features": [
-    "View the StioAIhacking.com temporary landing page",
-    "Read a clear temporary message on desktop or mobile"
+    "Read the 10 step security guide",
+    "Read or listen to the book in five languages",
+    "Share the site with a business owner"
   ],
   "category": "landing-page",
   "tags": [
-    "placeholder",
-    "responsive",
-    "website"
+    "security",
+    "small business",
+    "multilingual"
   ],
   "last_updated": "2026-11-02T03:36:58.776Z"
 }

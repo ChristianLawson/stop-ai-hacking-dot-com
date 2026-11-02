@@ -6,7 +6,7 @@
 
 ## Accepted Requirements
 
-- Build something tiny for StioAIhacking.com as the starting point.
+- The site is StopAIHacking.com: a static page for the Small Business Security book in five languages (English, Spanish, Simplified Chinese, Bengali, Arabic).
 
 ## Verified Commands
 
@@ -16,5 +16,5 @@
 
 ## Learnings
 
-- The starter is a static single-page view in src/frontend/src/App.tsx; its only interactive element is the attribution link.
-- Keep the exact brand spelling StioAIhacking.com and preserve social metadata in src/frontend/index.html.
+- The whole page lives as static HTML, CSS, and an inline script in src/frontend/index.html so every word is readable without JavaScript. App.tsx renders nothing.
+- The brand spelling is StopAIHacking.com. Covers are in src/frontend/public/covers. Never use em dashes or en dashes in page text.

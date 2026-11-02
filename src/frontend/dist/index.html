@@ -1,21 +1,353 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>StioAIhacking.com — Something new is taking shape</title>
-    <meta name="description" content="StioAIhacking.com is a temporary home while we work on what comes next." />
-    <meta property="og:title" content="StioAIhacking.com — Something new is taking shape" />
-    <meta property="og:description" content="A temporary home for StioAIhacking.com while we work on what comes next." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://caffeine.ai/imgs/share-logo.jpeg" />
-    <meta property="og:image:alt" content="Built with caffeine.ai" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="https://caffeine.ai/imgs/share-logo.jpeg" />
-    <script type="module" crossorigin src="/assets/index-DVeyZSk3.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-ycSjSlSR.css">
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<link rel="canonical" href="https://stopaihacking.com/">
+<meta property="og:title" content="Stop A.I. hacking today">
+<meta property="og:description" content="A 10 step guide and a book for small business owners, in five languages.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://stopaihacking.com/">
+<meta property="og:image" content="https://stopaihacking.com/covers/en.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://stopaihacking.com/covers/en.jpg">
+<link rel="icon" href="/favicon.ico">
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Stop AI Hacking</title>
+<meta name="description" content="Stop A.I. hacking today. A 10 step guide and a book for small business owners, in five languages.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,700..900&family=Figtree:wght@400;600;700&family=Noto+Kufi+Arabic:wght@400;700;800&family=Noto+Sans+Bengali:wght@400;700;800&family=Noto+Sans+SC:wght@400;700;900&display=swap">
+<style>
+/* Layout: phone first single column (header, hero, book card with its audio player, share); two columns from 880px with the book beside the hero. */
+:root{
+  --bg:#F3F5FA; --surface:#FFFFFF; --ink:#0D1733; --muted:#4A5675; --line:#DCE2EF;
+  --brand:#1A3BA8; --brand-hover:#142F88; --on-brand:#FFFFFF; --glow:rgba(26,59,168,.35);
+  --alert:#C8102E; --go-alt:#C8102E; --soft:#E7EDFB; --soft-ink:#1A3BA8; --ok:#11804A;
+  --display:"Archivo","Figtree",system-ui,sans-serif;
+  --body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#080E20; --surface:#101934; --ink:#EEF2FB; --muted:#A8B3CF; --line:#24304F;
+  --brand:#3A5FE8; --brand-hover:#5274F0; --on-brand:#FFFFFF; --glow:rgba(58,95,232,.45);
+  --alert:#FF5C70; --go-alt:#D7263D; --soft:#18244A; --soft-ink:#B4C5FF; --ok:#4BD08D; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#080E20; --surface:#101934; --ink:#EEF2FB; --muted:#A8B3CF; --line:#24304F;
+  --brand:#3A5FE8; --brand-hover:#5274F0; --on-brand:#FFFFFF; --glow:rgba(58,95,232,.45);
+  --alert:#FF5C70; --go-alt:#D7263D; --soft:#18244A; --soft-ink:#B4C5FF; --ok:#4BD08D; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:400 1.0625rem/1.5 var(--body);-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding-block:16px 32px;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:28px}
+@media (min-width:600px){.wrap{padding-left:max(40px,env(safe-area-inset-left,0px));padding-right:max(40px,env(safe-area-inset-right,0px))}}
+
+/* Header */
+.top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 20px}
+.brand{display:inline-flex;align-items:center;gap:10px;font:800 1.05rem var(--display);font-stretch:108%;letter-spacing:-.01em;color:var(--ink)}
+.brand svg{width:28px;height:28px;flex:none;color:var(--brand)}
+.langs{display:flex;flex-wrap:wrap;gap:6px}
+.langs button{min-height:44px;padding:0 14px;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:600 1rem var(--body);cursor:pointer}
+.langs button:hover{border-color:var(--brand)}
+.langs button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.langs button[lang="ar"]{font-family:"Noto Kufi Arabic",Tahoma,sans-serif}
+.langs button[lang="bn"]{font-family:"Noto Sans Bengali",sans-serif}
+.langs button[lang="zh-Hans"]{font-family:"Noto Sans SC","PingFang SC",sans-serif}
+
+/* Hero */
+.layout{display:grid;gap:28px}
+.hero{min-width:0;display:flex;flex-direction:column;gap:18px}
+.eyebrow{align-self:flex-start;display:inline-flex;align-items:center;gap:8px;margin:0;padding:6px 12px;border-radius:999px;background:var(--soft);color:var(--soft-ink);font-weight:700;font-size:.95rem}
+.eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--alert)}
+h1{margin:0;font:900 clamp(2.4rem,9vw,4.3rem)/1.02 var(--display);font-stretch:112%;letter-spacing:-.025em;text-wrap:balance}
+h1 .hl{color:var(--alert)}
+.sub{margin:0;max-width:34ch;color:var(--muted);font-size:clamp(1.15rem,4.2vw,1.35rem);line-height:1.45}
+.go{display:flex;align-items:center;justify-content:space-between;gap:14px;width:100%;max-width:520px;min-height:68px;padding:12px 12px 12px 22px;border-radius:18px;background:var(--brand);color:var(--on-brand);font:700 clamp(1.1rem,4.4vw,1.3rem)/1.25 var(--body);text-decoration:none;box-shadow:0 14px 30px -14px var(--glow);transition:background .15s ease,transform .15s ease}
+[dir="rtl"] .go{padding:12px 22px 12px 12px}
+.go{animation:goPulse 1s ease-in-out infinite alternate}
+@keyframes goPulse{from{background:var(--brand)}to{background:var(--go-alt)}}
+.go:hover{animation-play-state:paused}
+.go:active{transform:scale(.985)}
+.go .arrow{display:grid;place-items:center;width:44px;height:44px;flex:none;border-radius:12px;background:rgba(255,255,255,.16)}
+.go .arrow svg{width:22px;height:22px}
+[dir="rtl"] .go .arrow svg,[dir="rtl"] .share svg.flip{transform:scaleX(-1)}
+.trust{display:flex;flex-wrap:wrap;gap:8px 18px;margin:0 0 10px;padding:0;list-style:none;color:var(--muted);font-weight:600;font-size:1rem}
+.trust li{display:inline-flex;align-items:center;gap:6px}
+.trust svg{width:18px;height:18px;flex:none;color:var(--ok)}
+
+/* Book card */
+.book{min-width:0;width:100%;max-width:560px;display:flex;flex-wrap:wrap;gap:18px;align-items:center;padding:16px;border:1px solid var(--line);border-radius:20px;background:var(--surface)}
+.book img{display:block;width:112px;height:auto;max-width:100%;aspect-ratio:440/680;flex:none;border-radius:6px;-o-object-fit:cover;object-fit:cover;box-shadow:0 10px 24px -12px rgba(13,23,51,.55)}
+.actions{flex:1;min-width:0;display:flex;flex-direction:column;gap:10px}
+.btn{display:flex;align-items:center;gap:10px;width:100%;min-height:54px;padding:10px 16px;border-radius:14px;font:700 1.05rem/1.25 var(--body);text-decoration:none;text-align:start;cursor:pointer}
+.btn svg{width:22px;height:22px;flex:none}
+.btn.read{border:0;background:var(--soft);color:var(--soft-ink)}
+.btn.listen{border:1px solid var(--line);background:transparent;color:var(--ink)}
+.btn.listen[aria-expanded="true"]{border-color:var(--brand)}
+.btn:hover{outline:2px solid var(--brand);outline-offset:-2px}
+
+/* Audio player: short parts that stream one after another */
+.player{flex-basis:100%;min-width:0;display:flex;flex-direction:column;gap:12px;padding:14px;border-radius:16px;background:var(--soft);color:var(--ink)}
+.p-top{display:flex;align-items:center;gap:14px}
+.p-play{display:grid;place-items:center;width:60px;height:60px;flex:none;border:0;border-radius:50%;background:var(--brand);color:var(--on-brand);cursor:pointer;box-shadow:0 10px 22px -12px var(--glow)}
+.p-play:hover{background:var(--brand-hover)}
+.p-play svg{width:28px;height:28px}
+.p-meta{min-width:0;display:flex;flex-direction:column;gap:2px}
+.p-part{font-weight:700;font-size:1.05rem}
+.p-time{color:var(--muted);font-size:.95rem;font-variant-numeric:tabular-nums}
+.p-seek{width:100%;margin:0;accent-color:var(--brand);height:28px;cursor:pointer}
+.p-row{display:flex;flex-wrap:wrap;gap:8px}
+.p-row button{display:inline-flex;align-items:center;justify-content:center;gap:4px;min-width:48px;min-height:44px;padding:0 10px;border:1px solid var(--line);border-radius:12px;background:var(--surface);color:var(--ink);font:700 .95rem var(--body);cursor:pointer;font-variant-numeric:tabular-nums}
+.p-row button:hover{border-color:var(--brand)}
+.p-row button:disabled{opacity:.4;cursor:default}
+.p-row svg{width:20px;height:20px}
+.p-row .p-speed{margin-inline-start:auto}
+.p-note{margin:0;min-height:1.3em;color:var(--muted);font-size:.92rem}
+
+/* Bottom */
+.bottom{display:flex;flex-direction:column;align-items:flex-start;gap:10px;padding-top:22px;border-top:1px solid var(--line)}
+.share{display:inline-flex;align-items:center;gap:10px;min-height:54px;max-width:100%;padding:10px 20px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:700 1.05rem/1.25 var(--body);text-align:start;cursor:pointer}
+.share svg{width:22px;height:22px;flex:none;color:var(--brand)}
+.share:hover{border-color:var(--brand)}
+.msg{min-height:1.4em;margin:0;color:var(--muted)}
+.disc{color:var(--muted);font-size:.92rem}
+.disc summary{display:inline-flex;align-items:center;min-height:44px;cursor:pointer;text-decoration:underline;text-underline-offset:4px}
+.disc p{max-width:62ch;margin:0;line-height:1.5}
+
+/* Scripts other than Latin */
+[lang="ar"],[lang="ar"] *{font-family:"Noto Kufi Arabic",Tahoma,sans-serif!important;letter-spacing:0!important}
+[lang="bn"],[lang="bn"] *{font-family:"Noto Sans Bengali",sans-serif!important;letter-spacing:0!important}
+[lang="zh-Hans"],[lang="zh-Hans"] *{font-family:"Noto Sans SC","PingFang SC",sans-serif!important;letter-spacing:0!important}
+[lang="ar"] h1,[lang="bn"] h1,[lang="zh-Hans"] h1{line-height:1.3;font-size:clamp(2rem,7.5vw,3.6rem)}
+
+:focus-visible{outline:3px solid var(--brand);outline-offset:3px}
+
+@media (min-width:880px){
+  .wrap{padding-block:28px 40px;gap:44px}
+  .layout{grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:56px;align-items:center}
+  .book{flex-direction:column;flex-wrap:nowrap;align-items:stretch;padding:24px}
+  .book img{width:220px;align-self:center}
+  .player{flex-basis:auto}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}.go{animation:none}}
+</style>
+
+  <script type="module" crossorigin src="/assets/index-D4aiJkwD.js"></script>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <span class="brand"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.2-8 9-4.6-.8-8-4.5-8-9V6l8-3z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>StopAIHacking.com</span>
+    <nav class="langs" id="langs" aria-label="Language">
+      <button type="button" id="l-en" data-l="en" lang="en">English</button>
+      <button type="button" id="l-es" data-l="es" lang="es">Español</button>
+      <button type="button" id="l-zh" data-l="zh" lang="zh-Hans">中文</button>
+      <button type="button" id="l-bn" data-l="bn" lang="bn">বাংলা</button>
+      <button type="button" id="l-ar" data-l="ar" lang="ar" dir="rtl">العربية</button>
+    </nav>
+  </header>
+
+  <main class="layout" id="content">
+    <section class="hero">
+      <a class="go" id="guide" href="https://claude.ai/artifact/4hNtTcZhTuuxWJUSF1rvw6" target="_blank" rel="noopener"><span data-t="go">Start the 10 step security guide</span><span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span></a>
+      <ul class="trust" id="trust"></ul>
+      <p class="eyebrow" data-t="eyebrow">For deli and small business owners</p>
+      <h1 data-t="h1">Stop A.I. hacking <span class="hl">today.</span></h1>
+      <p class="sub" data-t="sub">10 simple steps. No computer training needed.</p>
+    </section>
+
+    <aside class="book">
+      <img id="cover" src="covers/en.jpg" alt="Small Business Security book cover" width="440" height="680" decoding="async">
+      <div class="actions">
+        <a class="btn read" id="book" href="https://tinyurl.com/TheSecurityBook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5V5a2 2 0 0 1 2-2h14v16H6.5A2.5 2.5 0 0 0 4 21.5"/><path d="M20 19v3H6.5"/></svg><span data-t="book">Read the full book</span></a>
+        <button class="btn listen" id="listen-btn" type="button" aria-expanded="false" aria-controls="player"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 14v-2a9 9 0 0 1 18 0v2"/><rect x="3" y="14" width="4" height="7" rx="1.5"/><rect x="17" y="14" width="4" height="7" rx="1.5"/></svg><span data-t="listen">Listen to the book</span></button>
+        <a class="btn listen" id="listen-link" href="#" target="_blank" rel="noopener" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 14v-2a9 9 0 0 1 18 0v2"/><rect x="3" y="14" width="4" height="7" rx="1.5"/><rect x="17" y="14" width="4" height="7" rx="1.5"/></svg><span data-t="listen">Listen to the book</span></a>
+      </div>
+      <div class="player" id="player" hidden>
+        <div class="p-top">
+          <button class="p-play" id="p-play" type="button" aria-label="Play"><svg id="p-ico-play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg><svg id="p-ico-pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" hidden><rect x="6" y="5" width="4.2" height="14" rx="1.2"/><rect x="13.8" y="5" width="4.2" height="14" rx="1.2"/></svg></button>
+          <div class="p-meta"><div class="p-part" id="p-part"></div><div class="p-time" id="p-time" dir="ltr">0:00</div></div>
+        </div>
+        <input class="p-seek" id="p-seek" type="range" min="0" max="1000" step="1" value="0" dir="ltr">
+        <div class="p-row" dir="ltr">
+          <button type="button" id="p-prev"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="5" y="5" width="2.4" height="14" rx="1"/><path d="M19 6.2v11.6a.8.8 0 0 1-1.2.7L9.6 12.7a.8.8 0 0 1 0-1.4l8.2-5.8a.8.8 0 0 1 1.2.7z"/></svg></button>
+          <button type="button" id="p-back"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.3-5.7"/><path d="M4 4v4h4"/></svg>15</button>
+          <button type="button" id="p-fwd">15<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.3-5.7"/><path d="M20 4v4h-4"/></svg></button>
+          <button type="button" id="p-next"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="16.6" y="5" width="2.4" height="14" rx="1"/><path d="M5 6.2v11.6a.8.8 0 0 0 1.2.7l8.2-5.8a.8.8 0 0 0 0-1.4L6.2 5.5a.8.8 0 0 0-1.2.7z"/></svg></button>
+          <button type="button" id="p-speed" class="p-speed">1×</button>
+        </div>
+        <p class="p-note" id="p-note" aria-live="polite"></p>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="bottom" id="bottom">
+    <button class="share" id="share-btn" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13"/><path d="M7 8l5-5 5 5"/><path d="M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></svg><span data-t="share">Send this to a business owner you know</span></button>
+    <p class="msg" id="share-msg" aria-live="polite"></p>
+    <details class="disc" id="disc"><summary data-t="discLabel">Disclaimer</summary><p data-t="discText">General information only, not professional, legal, or security advice. An independent project of the author, not affiliated with or endorsed by any employer or agency. Translations and audio are computer generated and may contain errors; the English edition is the reference.</p></details>
+  </footer>
+</div>
+
+<script>
+(function(){
+  /* Audio parts per language: [file, seconds]. Languages without parts here link to their own listening page. */
+  var PARTS={};
+  var AUDIO_PAGE={"en":"https://claude.ai/artifact/6C9RpLDxzUK5okWgvGNenT?lang=en","es":"https://claude.ai/artifact/6C9RpLDxzUK5okWgvGNenT?lang=es","bn":"https://claude.ai/artifact/6C9RpLDxzUK5okWgvGNenT?lang=bn","ar":"https://claude.ai/artifact/6C9RpLDxzUK5okWgvGNenT?lang=ar","zh":"https://claude.ai/artifact/JPxjjH56zDNUw28doFhpR3"};
+  var T={
+    en:{tag:'en',dir:'ltr',eyebrow:'For deli and small business owners',h1:'Stop A.I. hacking <span class="hl">today.</span>',sub:'10 simple steps. No computer training needed.',go:'Start the 10 step security guide',trust:['No sign up','No payment','Nothing to download'],book:'Read the full book',listen:'Listen to the book',share:'Send this to a business owner you know',copied:'Link copied.',shareText:'Stop A.I. hacking today. 10 simple steps for small business owners.',discLabel:'Disclaimer',discText:'General information only, not professional, legal, or security advice. An independent project of the author, not affiliated with or endorsed by any employer or agency. Translations and audio are computer generated and may contain errors; the English edition is the reference.',bookUrl:'https://tinyurl.com/TheSecurityBook',
+      p:{play:'Play',pause:'Pause',back:'Back 15 seconds',fwd:'Forward 15 seconds',prev:'Previous part',next:'Next part',speed:'Speed',part:'Part {n} of {m}',seek:'Position in this part',resume:'Picks up where you stopped.',loading:'Loading...',error:'This part did not load. Check your connection and press Play again.'}},
+    es:{tag:'es',dir:'ltr',eyebrow:'Para dueños de bodegas y pequeños negocios',h1:'Detenga las estafas y el hackeo con I.A. <span class="hl">hoy.</span>',sub:'10 pasos sencillos. No necesita saber de computadoras.',go:'Empiece la guía de seguridad de 10 pasos',trust:['Sin registrarse','Sin pagar','Sin descargar nada'],book:'Lea el libro completo',listen:'Escuche el libro',share:'Envíe esto a un dueño de negocio que conozca',copied:'Enlace copiado.',shareText:'Detenga el hackeo con I.A. hoy. 10 pasos sencillos para dueños de pequeños negocios.',discLabel:'Aviso',discText:'Solo información general, no es asesoría profesional, legal ni de seguridad. Es un proyecto independiente del autor, sin relación con ningún empleador ni agencia. Las traducciones y el audio se hicieron por computadora y pueden tener errores; la edición en inglés es la de referencia.',bookUrl:'https://tinyurl.com/SecurityBookSpanish',
+      p:{play:'Reproducir',pause:'Pausa',back:'Atrás 15 segundos',fwd:'Adelante 15 segundos',prev:'Parte anterior',next:'Parte siguiente',speed:'Velocidad',part:'Parte {n} de {m}',seek:'Posición en esta parte',resume:'Sigue donde lo dejó.',loading:'Cargando...',error:'Esta parte no cargó. Revise su conexión y presione Reproducir otra vez.'}},
+    zh:{tag:'zh-Hans',dir:'ltr',eyebrow:'写给小店和小商家店主',h1:'今天就阻止<span class="hl">人工智能黑客攻击。</span>',sub:'10个简单步骤。无需任何电脑知识。',go:'开始10步安全指南',trust:['无需注册','无需付款','无需下载'],book:'阅读完整的书',listen:'收听本书',share:'发给您认识的店主',copied:'链接已复制。',shareText:'今天就阻止人工智能黑客攻击。写给小商家店主的10个简单步骤。',discLabel:'免责声明',discText:'仅为一般信息，不构成专业、法律或安全建议。本项目由作者独立完成，与任何雇主或机构无关。翻译和音频由电脑生成，可能有错误；以英文版为准。',bookUrl:'https://tinyurl.com/SecurityBookChinese',
+      p:{play:'播放',pause:'暂停',back:'后退15秒',fwd:'前进15秒',prev:'上一部分',next:'下一部分',speed:'速度',part:'第{n}部分，共{m}部分',seek:'本部分的播放位置',resume:'从上次停下的地方继续。',loading:'加载中…',error:'这一部分没有加载成功。请检查网络后再按播放。'}},
+    bn:{tag:'bn',dir:'ltr',eyebrow:'দোকান ও ছোট ব্যবসার মালিকদের জন্য',h1:'আজই এ.আই. হ্যাকিং <span class="hl">থামান।</span>',sub:'১০টি সহজ ধাপ। কম্পিউটার জ্ঞানের দরকার নেই।',go:'১০ ধাপের নিরাপত্তা গাইড শুরু করুন',trust:['নিবন্ধন লাগবে না','টাকা লাগবে না','কিছু ডাউনলোড করতে হবে না'],book:'পুরো বইটি পড়ুন',listen:'বইটি শুনুন',share:'আপনার পরিচিত কোনো ব্যবসার মালিককে এটি পাঠান',copied:'লিংক কপি হয়েছে।',shareText:'আজই এ.আই. হ্যাকিং থামান। ছোট ব্যবসার মালিকদের জন্য ১০টি সহজ ধাপ।',discLabel:'দাবিত্যাগ',discText:'শুধু সাধারণ তথ্য, পেশাদার, আইনি বা নিরাপত্তা পরামর্শ নয়। এটি লেখকের একটি স্বাধীন প্রকল্প, কোনো নিয়োগকর্তা বা সংস্থার সাথে যুক্ত নয়। অনুবাদ ও অডিও কম্পিউটারে তৈরি এবং ভুল থাকতে পারে; ইংরেজি সংস্করণটিই মূল।',bookUrl:'https://tinyurl.com/SecurityBookBengali',
+      p:{play:'চালান',pause:'থামান',back:'১৫ সেকেন্ড পিছনে',fwd:'১৫ সেকেন্ড সামনে',prev:'আগের পর্ব',next:'পরের পর্ব',speed:'গতি',part:'পর্ব {n} / {m}',seek:'এই পর্বে কোথায় আছেন',resume:'যেখানে থেমেছিলেন সেখান থেকে চলবে।',loading:'লোড হচ্ছে...',error:'এই পর্বটি লোড হয়নি। ইন্টারনেট সংযোগ দেখে আবার চালান চাপুন।'}},
+    ar:{tag:'ar',dir:'rtl',eyebrow:'لأصحاب المحلات والأعمال الصغيرة',h1:'أوقف اختراق الذكاء الاصطناعي <span class="hl">اليوم.</span>',sub:'10 خطوات بسيطة. لا تحتاج إلى خبرة في الكمبيوتر.',go:'ابدأ دليل الأمان في 10 خطوات',trust:['بدون تسجيل','بدون دفع','بدون تحميل أي شيء'],book:'اقرأ الكتاب كاملاً',listen:'استمع إلى الكتاب',share:'أرسل هذا إلى صاحب عمل تعرفه',copied:'تم نسخ الرابط.',shareText:'أوقف اختراق الذكاء الاصطناعي اليوم. 10 خطوات بسيطة لأصحاب الأعمال الصغيرة.',discLabel:'إخلاء المسؤولية',discText:'معلومات عامة فقط، وليست نصيحة مهنية أو قانونية أو أمنية. هذا مشروع مستقل للمؤلف، غير تابع لأي جهة عمل أو وكالة. الترجمات والصوت مُنتَجة بالكمبيوتر وقد تحتوي على أخطاء، والنسخة الإنجليزية هي المرجع.',bookUrl:'https://tinyurl.com/SecurityBookArabic',
+      p:{play:'تشغيل',pause:'إيقاف مؤقت',back:'رجوع 15 ثانية',fwd:'تقديم 15 ثانية',prev:'الجزء السابق',next:'الجزء التالي',speed:'السرعة',part:'الجزء {n} من {m}',seek:'الموضع في هذا الجزء',resume:'يكمل من حيث توقفت.',loading:'جارٍ التحميل...',error:'لم يتم تحميل هذا الجزء. تحقق من الاتصال واضغط تشغيل مرة أخرى.'}}
+  };
+  var CHECK='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
+  var current='en';
+  function $(id){return document.getElementById(id);}
+  function store(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v);}catch(e){return null;}}
+
+  /* ---------- Audio player ---------- */
+  var audio=new Audio(); audio.preload='none';
+  var P={lang:null,i:0,pendingSeek:0,lastSave:0};
+  var SPEEDS=[1,1.25,1.5,0.75];
+  var speedIdx=0;
+  function num(n){return current==='bn'?new Intl.NumberFormat('bn-BD').format(n):String(n);}
+  function clock(s){s=Math.max(0,Math.floor(s||0));var h=Math.floor(s/3600),m=Math.floor(s%3600/60),x=s%60;return (h?h+':'+String(m).padStart(2,'0'):m)+':'+String(x).padStart(2,'0');}
+  function parts(){return PARTS[P.lang]||[];}
+  function src(i){return 'audio/'+P.lang+'/'+parts()[i][0];}
+  function savePos(force){
+    if(!P.lang)return; var now=Date.now();
+    if(!force&&now-P.lastSave<4000)return; P.lastSave=now;
+    store('sah-pos-'+P.lang,JSON.stringify({i:P.i,t:Math.floor(audio.currentTime||0)}));
+  }
+  function render(){
+    var p=T[current].p, list=parts(); if(!list.length)return;
+    var dur=list[P.i][1], t=P.pendingSeek||audio.currentTime||0;
+    $('p-part').textContent=p.part.replace('{n}',num(P.i+1)).replace('{m}',num(list.length));
+    $('p-time').textContent=clock(t)+' / '+clock(dur);
+    if(!dragging)$('p-seek').value=Math.round(Math.min(1,t/dur)*1000);
+    var playing=!audio.paused&&!audio.ended;
+    $('p-ico-play').hidden=playing; $('p-ico-pause').hidden=!playing;
+    $('p-play').setAttribute('aria-label',playing?p.pause:p.play);
+    $('p-prev').disabled=P.i===0; $('p-next').disabled=P.i>=list.length-1;
+  }
+  function labels(){
+    var p=T[current].p;
+    $('p-back').setAttribute('aria-label',p.back); $('p-fwd').setAttribute('aria-label',p.fwd);
+    $('p-prev').setAttribute('aria-label',p.prev); $('p-next').setAttribute('aria-label',p.next);
+    $('p-speed').setAttribute('aria-label',p.speed+' '+SPEEDS[speedIdx]+'×');
+    $('p-seek').setAttribute('aria-label',p.seek);
+  }
+  function load(lang,i,t){
+    P.lang=lang; P.i=i; P.pendingSeek=t||0;
+    audio.src=src(i); audio.playbackRate=SPEEDS[speedIdx];
+    meta(); render();
+  }
+  function setLang(lang){
+    if(P.lang===lang)return;
+    audio.pause();
+    var saved=null; try{saved=JSON.parse(store('sah-pos-'+lang)||'null');}catch(e){}
+    var list=PARTS[lang]||[];
+    if(saved&&saved.i>=0&&saved.i<list.length&&(saved.i>0||saved.t>5)){load(lang,saved.i,saved.t);$('p-note').textContent=T[current].p.resume;}
+    else{load(lang,0,0);$('p-note').textContent='';}
+  }
+  function go(i,t,autoplay){
+    var list=parts(); if(i<0||i>=list.length)return;
+    savePos(true); load(P.lang,i,t||0); if(autoplay)play();
+  }
+  function play(){
+    var p=audio.play(); $('p-note').textContent=audio.readyState<3?T[current].p.loading:'';
+    if(p&&p.catch)p.catch(function(e){if(e&&e.name!=='AbortError')$('p-note').textContent=T[current].p.error;});
+  }
+  function nudge(d){
+    var dur=parts()[P.i][1], t=(audio.currentTime||0)+d;
+    if(t<0&&P.i>0){go(P.i-1,Math.max(0,parts()[P.i-1][1]+t),!audio.paused);return;}
+    if(t>=dur-1&&P.i<parts().length-1){go(P.i+1,0,!audio.paused);return;}
+    audio.currentTime=Math.max(0,Math.min(dur-1,t)); render();
+  }
+  function meta(){
+    if(!('mediaSession' in navigator))return;
+    try{navigator.mediaSession.metadata=new MediaMetadata({title:'Small Business Security',artist:'Christian Lawson',album:T[current].p.part.replace('{n}',num(P.i+1)).replace('{m}',num(parts().length)),artwork:[{src:'covers/'+P.lang+'.jpg',sizes:'440x680',type:'image/jpeg'}]});}catch(e){}
+  }
+  try{
+    var ms=navigator.mediaSession;
+    if(ms){
+      ms.setActionHandler('play',play); ms.setActionHandler('pause',function(){audio.pause();});
+      ms.setActionHandler('seekbackward',function(){nudge(-15);}); ms.setActionHandler('seekforward',function(){nudge(15);});
+      ms.setActionHandler('previoustrack',function(){go(P.i-1,0,true);}); ms.setActionHandler('nexttrack',function(){go(P.i+1,0,true);});
+    }
+  }catch(e){}
+  audio.addEventListener('loadedmetadata',function(){if(P.pendingSeek){try{audio.currentTime=P.pendingSeek;}catch(e){}P.pendingSeek=0;}render();});
+  audio.addEventListener('playing',function(){$('p-note').textContent='';render();});
+  audio.addEventListener('waiting',function(){$('p-note').textContent=T[current].p.loading;});
+  audio.addEventListener('pause',function(){savePos(true);render();});
+  audio.addEventListener('timeupdate',function(){savePos(false);render();});
+  audio.addEventListener('ended',function(){if(P.i<parts().length-1)go(P.i+1,0,true);else{store('sah-pos-'+P.lang,'');render();}});
+  audio.addEventListener('error',function(){if(audio.src)$('p-note').textContent=T[current].p.error;render();});
+  $('p-play').addEventListener('click',function(){if(audio.paused)play();else audio.pause();});
+  $('p-back').addEventListener('click',function(){nudge(-15);});
+  $('p-fwd').addEventListener('click',function(){nudge(15);});
+  $('p-prev').addEventListener('click',function(){go(P.i-1,0,!audio.paused);});
+  $('p-next').addEventListener('click',function(){go(P.i+1,0,!audio.paused);});
+  $('p-speed').addEventListener('click',function(){speedIdx=(speedIdx+1)%SPEEDS.length;audio.playbackRate=SPEEDS[speedIdx];this.textContent=SPEEDS[speedIdx]+'×';labels();});
+  var dragging=false, seek=$('p-seek');
+  seek.addEventListener('input',function(){dragging=true;var dur=parts()[P.i][1];$('p-time').textContent=clock(seek.value/1000*dur)+' / '+clock(dur);});
+  seek.addEventListener('change',function(){var dur=parts()[P.i][1];var t=seek.value/1000*dur;dragging=false;if(audio.readyState>0)audio.currentTime=t;else P.pendingSeek=t;render();});
+  $('listen-btn').addEventListener('click',function(){
+    var open=$('player').hidden;
+    $('player').hidden=!open; this.setAttribute('aria-expanded',open?'true':'false');
+    if(open){setLang(current);render();play();}
+  });
+
+  /* ---------- Page text and language ---------- */
+  function pick(){
+    try{var q=new URLSearchParams(location.search).get('lang');if(q&&T[q])return q;}catch(e){}
+    var s=store('sah-lang');if(s&&T[s])return s;
+    var list=navigator.languages||[navigator.language||'en'];
+    for(var i=0;i<list.length;i++){var c=String(list[i]).slice(0,2).toLowerCase();if(T[c])return c;}
+    return 'en';
+  }
+  function apply(code){
+    var t=T[code]; current=code;
+    [$('content'),$('bottom')].forEach(function(el){el.lang=t.tag;el.dir=t.dir;});
+    document.documentElement.lang=t.tag;
+    document.querySelectorAll('[data-t]').forEach(function(el){
+      var k=el.getAttribute('data-t');
+      if(k==='h1')el.innerHTML=t.h1; else el.textContent=t[k];
+    });
+    var ul=$('trust'); ul.innerHTML='';
+    t.trust.forEach(function(x){var li=document.createElement('li');li.innerHTML=CHECK;li.appendChild(document.createTextNode(x));ul.appendChild(li);});
+    $('book').href=t.bookUrl;
+    $('cover').src='covers/'+code+'.jpg';
+    var inline=!!(PARTS[code]&&PARTS[code].length);
+    $('listen-btn').hidden=!inline; $('listen-link').hidden=inline;
+    if(!inline){$('listen-link').href=AUDIO_PAGE[code]||'#';audio.pause();$('player').hidden=true;$('listen-btn').setAttribute('aria-expanded','false');}
+    else if(!$('player').hidden){setLang(code);}
+    labels(); render();
+    document.querySelectorAll('#langs button').forEach(function(b){b.setAttribute('aria-pressed',b.getAttribute('data-l')===code?'true':'false');});
+    $('share-msg').textContent='';
+  }
+  $('langs').addEventListener('click',function(e){
+    var b=e.target.closest('button[data-l]'); if(!b)return;
+    var c=b.getAttribute('data-l'); apply(c); store('sah-lang',c);
+  });
+  var url='https://stopaihacking.com', msg=$('share-msg');
+  function tryCopy(){
+    try{navigator.clipboard.writeText(url).then(function(){msg.textContent=T[current].copied;},function(){msg.textContent=url;});}catch(e){msg.textContent=url;}
+  }
+  $('share-btn').addEventListener('click',function(){
+    if(navigator.share){navigator.share({title:'Stop A.I. hacking',text:T[current].shareText,url:url}).catch(function(e){if(e&&e.name!=='AbortError')tryCopy();});return;}
+    tryCopy();
+  });
+  window.addEventListener('pagehide',function(){savePos(true);});
+  apply(pick());
+})();
+</script>
+
+
+<div id="root" hidden></div>
+</body>
 </html>
