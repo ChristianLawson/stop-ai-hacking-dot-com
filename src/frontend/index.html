@@ -23,18 +23,18 @@
 :root{
   --sah-bg:#F3F5FA; --sah-surface:#FFFFFF; --sah-ink:#0D1733; --sah-muted:#4A5675; --sah-line:#DCE2EF;
   --sah-brand:#1A3BA8; --sah-brand-hover:#142F88; --sah-on-brand:#FFFFFF; --sah-glow:rgba(26,59,168,.35);
-  --sah-alert:#C8102E; --sah-go-alt:#C8102E; --sah-soft:#E7EDFB; --sah-soft-ink:#1A3BA8; --sah-ok:#11804A;
+  --sah-alert:#C8102E; --sah-go:#11804A; --sah-go-hover:#0C6A3C; --sah-go-glow:rgba(17,128,74,.45); --sah-soft:#E7EDFB; --sah-soft-ink:#1A3BA8; --sah-ok:#11804A;
   --sah-display:"Archivo","Figtree",system-ui,sans-serif;
   --sah-body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
   --sah-bg:#080E20; --sah-surface:#101934; --sah-ink:#EEF2FB; --sah-muted:#A8B3CF; --sah-line:#24304F;
   --sah-brand:#3A5FE8; --sah-brand-hover:#5274F0; --sah-on-brand:#FFFFFF; --sah-glow:rgba(58,95,232,.45);
-  --sah-alert:#FF5C70; --sah-go-alt:#D7263D; --sah-soft:#18244A; --sah-soft-ink:#B4C5FF; --sah-ok:#4BD08D; color-scheme:dark}}
+  --sah-alert:#FF5C70; --sah-go:#13874F; --sah-go-hover:#17995A; --sah-go-glow:rgba(75,208,141,.45); --sah-soft:#18244A; --sah-soft-ink:#B4C5FF; --sah-ok:#4BD08D; color-scheme:dark}}
 :root[data-theme="dark"]{
   --sah-bg:#080E20; --sah-surface:#101934; --sah-ink:#EEF2FB; --sah-muted:#A8B3CF; --sah-line:#24304F;
   --sah-brand:#3A5FE8; --sah-brand-hover:#5274F0; --sah-on-brand:#FFFFFF; --sah-glow:rgba(58,95,232,.45);
-  --sah-alert:#FF5C70; --sah-go-alt:#D7263D; --sah-soft:#18244A; --sah-soft-ink:#B4C5FF; --sah-ok:#4BD08D; color-scheme:dark}
+  --sah-alert:#FF5C70; --sah-go:#13874F; --sah-go-hover:#17995A; --sah-go-glow:rgba(75,208,141,.45); --sah-soft:#18244A; --sah-soft-ink:#B4C5FF; --sah-ok:#4BD08D; color-scheme:dark}
 
 *{box-sizing:border-box}
 html body{background:var(--sah-bg);color:var(--sah-ink);font:400 1.0625rem/1.5 var(--sah-body);-webkit-font-smoothing:antialiased}
@@ -67,11 +67,11 @@ html body{background:var(--sah-bg);color:var(--sah-ink);font:400 1.0625rem/1.5 v
 .hero h1{margin:0;font:900 clamp(2.4rem,9vw,4.3rem)/1.02 var(--sah-display);font-stretch:112%;letter-spacing:-.025em;text-wrap:balance}
 h1 .hl{color:var(--sah-alert)}
 .sub{margin:0;max-width:34ch;color:var(--sah-muted);font-size:clamp(1.15rem,4.2vw,1.35rem);line-height:1.45}
-.go{display:flex;align-items:center;justify-content:space-between;gap:14px;width:100%;max-width:520px;min-height:68px;padding:12px 12px 12px 22px;border-radius:18px;background:var(--sah-brand);color:var(--sah-on-brand);font:700 clamp(1.1rem,4.4vw,1.3rem)/1.25 var(--sah-body);text-decoration:none;box-shadow:0 14px 30px -14px var(--sah-glow);transition:background .15s ease,transform .15s ease}
+.go{display:flex;align-items:center;justify-content:space-between;gap:14px;width:100%;max-width:520px;min-height:68px;padding:12px 12px 12px 22px;border-radius:18px;background:var(--sah-go);color:#FFFFFF;font:700 clamp(1.1rem,4.4vw,1.3rem)/1.25 var(--sah-body);text-decoration:none;box-shadow:0 14px 30px -14px var(--sah-go-glow);transition:background .15s ease,transform .15s ease}
 [dir="rtl"] .go{padding:12px 22px 12px 12px}
-.go{animation:goPulse 1s ease-in-out infinite alternate}
-@keyframes goPulse{from{background:var(--sah-brand)}to{background:var(--sah-go-alt)}}
-.go:hover{animation-play-state:paused}
+.go{animation:goGlow 2.6s ease-in-out infinite}
+@keyframes goGlow{0%,100%{box-shadow:0 14px 30px -14px var(--sah-go-glow),0 0 0 0 var(--sah-go-glow)}50%{box-shadow:0 14px 30px -14px var(--sah-go-glow),0 0 0 8px rgba(17,128,74,0)}}
+.go:hover{background:var(--sah-go-hover);animation-play-state:paused}
 .go:active{transform:scale(.985)}
 .go .arrow{display:grid;place-items:center;width:44px;height:44px;flex:none;border-radius:12px;background:rgba(255,255,255,.16)}
 .go .arrow svg{width:22px;height:22px}
