@@ -49,6 +49,15 @@ html body{background:var(--sah-bg);color:var(--sah-ink);font:400 1.0625rem/1.5 v
 .share-top{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 14px;border-radius:12px;border:1px solid var(--sah-line);background:var(--sah-surface);color:var(--sah-ink);font:700 1rem var(--sah-body);cursor:pointer}
 .share-top svg{width:20px;height:20px;flex:none;color:var(--sah-brand)}
 .share-top:hover{border-color:var(--sah-brand)}
+@media (max-width:480px){
+  .top{gap:10px}
+  .brand{font-size:.95rem;gap:8px}
+  .brand svg{width:24px;height:24px}
+  .top-left{gap:8px;flex-wrap:nowrap}
+  .share-top{padding:0 12px;font-size:.95rem}
+  .top .langs{gap:5px}
+  .top .langs button{padding:0 9px;font-size:.92rem}
+}
 .top-right{display:flex;flex-direction:column;align-items:flex-end;gap:10px}
 @media (max-width:640px){.top-right{align-items:flex-start}}
 .langs{display:flex;flex-wrap:wrap;gap:6px}
